@@ -1,0 +1,15 @@
+app = "nctwitterurl"  # 後でFly.ioで決めた名前に書き換えるか、空欄にしてもよい
+
+[build]
+  image = "node:18"
+
+[env]
+  DISCORD_TOKEN = ""
+
+[[services]]
+  internal_port = 3000
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
